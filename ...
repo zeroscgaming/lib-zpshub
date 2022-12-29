@@ -252,7 +252,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	
 	local uitab = {}
 	
-	function uitab:Tab(text)
+	function uitab:AddTab(text)
 		local TabButton = Instance.new("TextButton")
 		TabButton.Parent = ScrollTab
 		TabButton.Name = text.."Server"
