@@ -10,7 +10,7 @@ local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.Plac
     wait(1)
 
 do local GUI = game.CoreGui:FindFirstChild("Darkrai");if GUI then GUI:Destroy();end;if _G.Color == nil then
-       _G.Color = Color3.fromRGB(255,255,0)
+       _G.Color = Color3.fromRGB(255,255,255)
    end 
 end
 
@@ -139,18 +139,18 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	Name.Size = UDim2.new(0, 61, 0, 27)
 	Name.Font = Enum.Font.GothamSemibold
 	Name.Text = hubname
-	Name.TextColor3 = Color3.fromRGB(147,112,219)
+	Name.TextColor3 = Color3.fromRGB(255,255,255)
 	Name.TextSize = 17.000
 
 	local Hub = Instance.new("TextLabel")
 	Hub.Name = "Hub"
 	Hub.Parent = Top
-	Hub.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	Hub.BackgroundTransparency = 1.000
-	Hub.Position = UDim2.new(0, 120, 0, 0)
+	Hub.Position = UDim2.new(0, 110, 0, 0)
 	Hub.Size = UDim2.new(0, 81, 0, 27)
 	Hub.Font = Enum.Font.GothamSemibold
-	Hub.Text = "  - "..gamename
+	Hub.Text = "  | "..gamename
 	Hub.TextColor3 = Color3.fromRGB(255,255,255)
 	Hub.TextSize = 17.000
 	Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -164,7 +164,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	BindButton.Size = UDim2.new(0, 100, 0, 27)
 	BindButton.Font = Enum.Font.GothamSemibold
 	BindButton.Text = "[RightControl]"
-	BindButton.TextColor3 = Color3.fromRGB(147,112,219)
+	BindButton.TextColor3 = Color3.fromRGB(255,255,255)
 	BindButton.TextSize = 13.000
 
 	local Tab = Instance.new("Frame")
@@ -338,7 +338,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		end)
 		
 		local main = {}
-		function main:AddButton(text,callback)
+		function main:Button(text,callback)
 			local Button = Instance.new("Frame")
 			local UICorner = Instance.new("UICorner")
 			local TextBtn = Instance.new("TextButton")
@@ -403,7 +403,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				callback()
 			end)
 		end
-		function main:AddToggle(text,config,callback)
+		function main:Toggle(text,config,callback)
 			config = config or false
 			local toggled = config
 			local Toggle = Instance.new("Frame")
@@ -426,7 +426,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 			Button.Name = "Button"
 			Button.Parent = Toggle
-			Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 			Button.Position = UDim2.new(0, 1, 0, 1)
 			Button.Size = UDim2.new(0, 468, 0, 29)
 			Button.AutoButtonColor = false
@@ -460,7 +460,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 
 			Circle.Name = "Circle"
 			Circle.Parent = ToggleImage
-			Circle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			Circle.BackgroundColor3 = Color3.fromRGB(227, 60, 60)
 			Circle.Position = UDim2.new(0, 2, 0, 2)
 			Circle.Size = UDim2.new(0, 16, 0, 16)
 
@@ -499,7 +499,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				pcall(callback,toggled)
 			end
 		end
-		function main:AddDropdown(text,option,callback)
+		function main:Dropdown(text,option,callback)
 			local isdropping = false
 			local Dropdown = Instance.new("Frame")
 			local UICorner = Instance.new("UICorner")
@@ -692,7 +692,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			return dropfunc
 		end
 
-		function main:AddSlider(text,min,max,set,callback)
+		function main:Slider(text,min,max,set,callback)
 			local Slider = Instance.new("Frame")
 			local slidercorner = Instance.new("UICorner")
 			local sliderr = Instance.new("Frame")
@@ -870,7 +870,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			end)
 		end
 
-		function main:AddTextbox(text,disappear,callback)
+		function main:Textbox(text,disappear,callback)
 			local Textbox = Instance.new("Frame")
 			local TextboxCorner = Instance.new("UICorner")
 			local Textboxx = Instance.new("Frame")
@@ -946,7 +946,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = RealTextbox
 		end
-		function main:AddLabel(text)
+		function main:Label(text)
 			local Label = Instance.new("TextLabel")
 			local PaddingLabel = Instance.new("UIPadding")
 			local labelfunc = {}
@@ -972,7 +972,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			return labelfunc
 		end
 
-		function main:AddSeperator(text)
+		function main:Seperator(text)
 			local Seperator = Instance.new("Frame")
 			local Sep1 = Instance.new("Frame")
 			local Sep2 = Instance.new("TextLabel")
@@ -1010,7 +1010,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			Sep3.Size = UDim2.new(0, 80, 0, 1)
 		end
 
-		function main:AddLine()
+		function main:Line()
 			local Linee = Instance.new("Frame")
 			local Line = Instance.new("Frame")
 			
