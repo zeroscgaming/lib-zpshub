@@ -499,7 +499,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 				pcall(callback,toggled)
 			end
 		end
-		function main:Dropdown(text,option,callback)
+		function main:AddDropdown(text,option,callback)
 			local isdropping = false
 			local Dropdown = Instance.new("Frame")
 			local UICorner = Instance.new("UICorner")
@@ -633,7 +633,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			end)
 
 			local dropfunc = {}
-			function dropfunc:Add(t)
+			function dropfunc:Adddrop(t)
 				local Item = Instance.new("TextButton")
 				Item.Name = "Item"
 				Item.Parent = DropScroll
