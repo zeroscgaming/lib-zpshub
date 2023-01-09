@@ -56,7 +56,7 @@ function Blacklib:Window(gametitle)
     local PlaLab = Instance.new("TextLabel")
     
     -- Propertiers --
-    BlackTrap.Name = "BlackTrap"
+    BlackTrap.Name = "ZPS X"
     BlackTrap.Parent = game.CoreGui
     BlackTrap.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     
