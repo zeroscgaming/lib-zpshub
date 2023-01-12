@@ -99,7 +99,7 @@ do  local create =  game:GetService("CoreGui"):FindFirstChild("Reduisceen")  if 
 	end
 
 	local create = {}
-	function create.win()
+	function Library.xova()
 	    if logoid == nil or logoid == "" then
 	        logoid = "10102908112"
 	    end
@@ -529,7 +529,7 @@ local IMGNAME = Instance.new("ImageLabel")
 		NameReal2.AnchorPoint = Vector2.new(0.5, 0.5)
 		NameReal2.Size = UDim2.new(0, 136, 0, 34)
 		NameReal2.Font = Enum.Font.GothamBold
-		NameReal2.Text = "                 Xero x Community"
+		NameReal2.Text = "                 ZPS x Community"
 		NameReal2.TextColor3 = _G.ColorMethod
 		NameReal2.TextSize = 25.000
 
@@ -593,7 +593,7 @@ local IMGNAME = Instance.new("ImageLabel")
 		NameReal.AnchorPoint = Vector2.new(0.5, 0.5)
 		NameReal.Size = UDim2.new(0, 136, 0, 34)
 		NameReal.Font = Enum.Font.GothamBold
-		NameReal.Text = "            Xero "
+		NameReal.Text = "            ZPS X "
 		NameReal.TextColor3 = _G.ColorMethod
 		NameReal.TextSize = 23.000
 		
@@ -824,7 +824,7 @@ local IMGNAME = Instance.new("ImageLabel")
 		end
 
 
-		function top:Taps(text)
+		function top:create(text)
 			PageOrders = PageOrders + 1
 			local name = tostring(text) or tostring(math.random(1,5000))
 
@@ -942,7 +942,7 @@ local IMGNAME = Instance.new("ImageLabel")
 
 			local page = {}
 
-			function page:newpage()
+			function page:xovapage()
 
 				local Pageframe = Instance.new("Frame")
 
